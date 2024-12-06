@@ -1,0 +1,66 @@
+import type { Config } from 'tailwindcss';
+
+export default {
+  content: ['./src/**/*.{html,js,svelte,ts}'],
+
+  theme: {
+    extend: {
+      colors: {
+        "m3-primary": 'rgb(var(--m3-primary))',
+        "m3-surface-tint": 'rgb(var(--m3-surface-tint))',
+        "m3-on-primary": 'rgb(var(--m3-on-primary))',
+        "m3-primary-container": 'rgb(var(--m3-primary-container))',
+        "m3-on-primary-container": 'rgb(var(--m3-on-primary-container))',
+        "m3-secondary": 'rgb(var(--m3-secondary))',
+        "m3-on-secondary": 'rgb(var(--m3-on-secondary))',
+        "m3-secondary-container": 'rgb(var(--m3-secondary-container))',
+        "m3-on-secondary-container": 'rgb(var(--m3-on-secondary-container))',
+        "m3-tertiary": 'rgb(var(--m3-tertiary))',
+        "m3-on-tertiary": 'rgb(var(--m3-on-tertiary))',
+        "m3-tertiary-container": 'rgb(var(--m3-tertiary-container))',
+        "m3-on-tertiary-container": 'rgb(var(--m3-on-tertiary-container))',
+        "m3-error": 'rgb(var(--m3-error))',
+        "m3-on-error": 'rgb(var(--m3-on-error))',
+        "m3-error-container": 'rgb(var(--m3-error-container))',
+        "m3-on-error-container": 'rgb(var(--m3-on-error-container))',
+        "m3-background": 'rgb(var(--m3-background))',
+        "m3-on-background": 'rgb(var(--m3-on-background))',
+        "m3-surface": 'rgb(var(--m3-surface))',
+        "m3-on-surface": 'rgb(var(--m3-on-surface))',
+        "m3-surface-variant": 'rgb(var(--m3-surface-variant))',
+        "m3-on-surface-variant": 'rgb(var(--m3-on-surface-variant))',
+        "m3-outline": 'rgb(var(--m3-outline))',
+        "m3-outline-variant": 'rgb(var(--m3-outline-variant))',
+        "m3-shadow": 'rgb(var(--m3-shadow))',
+        "m3-scrim": 'rgb(var(--m3-scrim))',
+        "m3-inverse-surface": 'rgb(var(--m3-inverse-surface))',
+        "m3-inverse-on-surface": 'rgb(var(--m3-inverse-on-surface))',
+        "m3-inverse-primary": 'rgb(var(--m3-inverse-primary))',
+        "m3-primary-fixed": 'rgb(var(--m3-primary-fixed))',
+        "m3-on-primary-fixed": 'rgb(var(--m3-on-primary-fixed))',
+        "m3-primary-fixed-dim": 'rgb(var(--m3-primary-fixed-dim))',
+        "m3-on-primary-fixed-variant": 'rgb(var(--m3-on-primary-fixed-variant))',
+        "m3-secondary-fixed": 'rgb(var(--m3-secondary-fixed))',
+        "m3-on-secondary-fixed": 'rgb(var(--m3-on-secondary-fixed))',
+        "m3-secondary-fixed-dim": 'rgb(var(--m3-secondary-fixed-dim))',
+        "m3-on-secondary-fixed-variant": 'rgb(var(--m3-on-secondary-fixed-variant))',
+        "m3-tertiary-fixed": 'rgb(var(--m3-tertiary-fixed))',
+        "m3-on-tertiary-fixed": 'rgb(var(--m3-on-tertiary-fixed))',
+        "m3-tertiary-fixed-dim": 'rgb(var(--m3-tertiary-fixed-dim))',
+        "m3-on-tertiary-fixed-variant": 'rgb(var(--m3-on-tertiary-fixed-variant))',
+        "m3-surface-dim": 'rgb(var(--m3-surface-dim))',
+        "m3-surface-bright": 'rgb(var(--m3-surface-bright))',
+        "m3-surface-container-lowest": 'rgb(var(--m3-surface-container-lowest))',
+        "m3-surface-container-low": 'rgb(var(--m3-surface-container-low))',
+        "m3-surface-container": 'rgb(var(--m3-surface-container))',
+        "m3-surface-container-high": 'rgb(var(--m3-surface-container-high))',
+        "m3-surface-container-highest": 'rgb(var(--m3-surface-container-highest))',
+      },
+      fontFamily: {
+        "Roboto": ['Roboto', 'sans-serif'],
+      },
+    }
+  },
+
+  plugins: []
+} satisfies Config;
