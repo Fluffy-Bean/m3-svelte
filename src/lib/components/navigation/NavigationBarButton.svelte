@@ -11,10 +11,9 @@
     let { icon, label, link, selected }: Props = $props();
 </script>
 
-<li>
-    <a class="h-[56px] flex flex-col justify-center items-center gap-[4px]" href={link}>
+<a class="w-full flex flex-col justify-center items-center gap-[4px]" href={link}>
         <span
-            class="h-[32px] w-[56px] rounded-full flex items-center justify-center"
+            class="h-[32px] w-[64px] rounded-full flex items-center justify-center"
             class:bg-m3-secondary-container={selected}
             class:text-m3-on-secondary-container={selected}
             class:bg-m3-transparent={!selected}
@@ -22,12 +21,11 @@
         >
             <SvgIcon type="mdi" path={icon} size={24} />
         </span>
-            <span
-                class="text-m3-size-label-small"
-                class:text-m3-on-surface={selected}
-                class:text-m3-on-surface-variant={!selected}
-            >
-            {label}
-        </span>
-    </a>
-</li>
+    <span
+        class="text-m3-size-label-small"
+        class:text-m3-on-surface={selected}
+        class:text-m3-on-surface-variant={!selected}
+    >
+        {label}
+    </span>
+</a>

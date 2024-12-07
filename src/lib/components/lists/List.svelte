@@ -1,26 +1,38 @@
 <script lang="ts">
-    import { mdiAccountOutline, mdiDragHorizontalVariant } from "@mdi/js";
-    import SvgIcon from "@jamescoyle/svelte-icon";
+    import type { Snippet } from "svelte";
 
     interface Props {
-        headline: string;
-        supporting?: string;
+        link?: string;
+        leading?: Snippet,
+        body: Snippet,
+        trailing?: Snippet,
     }
 
-    let { headline, supporting }: Props = $props();
+    let { link, leading, body, trailing }: Props = $props();
 </script>
 
-<div class="flex flex-row h-[56px]">
-    <div class="pl-4 flex justify-center items-center text-m3-on-surface-variant">
-        <SvgIcon type="mdi" path={mdiAccountOutline} size={24} />
+{#snippet list()}
+    {#if leading}
+        <div class="pl-4 flex justify-center items-center text-m3-on-surface-variant">
+            {@render leading()}
+        </div>
+    {/if}
+    <div class="px-4 py-[12px] flex flex-col w-full justify-center items-start">
+        {@render body()}
     </div>
+    {#if trailing}
+        <div class="pr-4 flex justify-center items-center text-m3-on-surface-variant">
+            {@render trailing()}
+        </div>
+    {/if}
+{/snippet}
 
-    <div class="px-4 flex flex-col w-full justify-center items-start">
-        <p class="text-m3-on-surface text-m3-size-body-large">{ headline }</p>
-        {#if supporting}<p class="text-m3-size-body-medium text-m3-on-surface-variant">{ supporting }</p>{/if}
+{#if link}
+    <a href={link} class="flex flex-row min-h-[72px]">
+        {@render list()}
+    </a>
+{:else}
+    <div class="flex flex-row min-h-[72px]">
+        {@render list()}
     </div>
-
-    <div class="pr-4 flex justify-center items-center text-m3-on-surface-variant">
-        <SvgIcon type="mdi" path={mdiDragHorizontalVariant} size={24} />
-    </div>
-</div>
+{/if}

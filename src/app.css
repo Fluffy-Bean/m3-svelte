@@ -115,7 +115,7 @@
 
     html {
         font-family: "Roboto Flex Variable", sans-serif;
-        @apply bg-m3-surface;
+        @apply bg-m3-surface-container-lowest;
     }
 }
 
