@@ -22,7 +22,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"@fontsource/roboto": "^5.1.0",
+		"@fontsource-variable/roboto-flex": "^5.1.0",
 		"@jamescoyle/svelte-icon": "^0.1.1",
 		"@mdi/js": "^7.4.47"
 	}

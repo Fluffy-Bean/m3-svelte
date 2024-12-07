@@ -25,5 +25,5 @@
     onclick={onclick}
 >
     {#if icon}<div class="-mx-2"><SvgIcon type="mdi" path={icon} size={18} /></div>{/if}
-    {#if text}<span class="text-center">{text}</span>{/if}
+    {#if text}<span class="text-center text-m3-size-label-large">{text}</span>{/if}
 </button>

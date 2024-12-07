@@ -3,7 +3,6 @@
     import { slide } from "svelte/transition";
     import SvgIcon from "@jamescoyle/svelte-icon";
     import { mdiMenuUp } from "@mdi/js";
-    import Divider from "$lib/components/Divider.svelte";
 
     interface Props {
         entries: Array<{
