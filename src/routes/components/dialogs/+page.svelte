@@ -1,7 +1,7 @@
 <script lang="ts">
     import { mdiForumPlusOutline, mdiExclamation } from "@mdi/js";
 
-    import Button from "$lib/components/buttons/Button.svelte";
+    import Button from "$lib/components/buttons/CommonButton.svelte";
     import Card from "$lib/components/cards/Card.svelte";
     import Dialog from "$lib/components/dialogs/Dialog.svelte";
 

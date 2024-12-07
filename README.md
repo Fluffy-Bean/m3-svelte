@@ -24,7 +24,7 @@ Following the list of components mentioned in https://m3.material.io/components.
  - [ ] Chips
  - [ ] Date Pickers
  - [ ] Dialogs
- - [ ] Divider
+ - [x] Divider
  - [ ] Lists
  - [ ] Menus
  - [ ] Navigation Bar (Bottom Bar?)

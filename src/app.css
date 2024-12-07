@@ -4,113 +4,118 @@
 
 @layer base {
     /* Dark Red */
-    :root {
-        --m3-primary: 255 181 160;
-        --m3-surface-tint: 255 181 160;
-        --m3-on-primary: 86 31 15;
-        --m3-primary-container: 114 53 35;
-        --m3-on-primary-container: 255 219 209;
-        --m3-secondary: 231 189 178;
-        --m3-on-secondary: 68 42 34;
-        --m3-secondary-container: 93 64 55;
-        --m3-on-secondary-container: 255 219 209;
-        --m3-tertiary: 216 197 141;
-        --m3-on-tertiary: 59 47 5;
-        --m3-tertiary-container: 83 70 25;
-        --m3-on-tertiary-container: 245 225 167;
-        --m3-error: 255 180 171;
-        --m3-on-error: 105 0 5;
-        --m3-error-container: 147 0 10;
-        --m3-on-error-container: 255 218 214;
-        --m3-background: 26 17 15;
-        --m3-on-background: 241 223 218;
-        --m3-surface: 26 17 15;
-        --m3-on-surface: 241 223 218;
-        --m3-surface-variant: 83 67 63;
-        --m3-on-surface-variant: 216 194 188;
-        --m3-outline: 160 140 135;
-        --m3-outline-variant: 83 67 63;
-        --m3-shadow: 0 0 0;
-        --m3-scrim: 0 0 0;
-        --m3-inverse-surface: 241 223 218;
-        --m3-inverse-on-surface: 57 46 43;
-        --m3-inverse-primary: 143 76 56;
-        --m3-primary-fixed: 255 219 209;
-        --m3-on-primary-fixed: 58 11 1;
-        --m3-primary-fixed-dim: 255 181 160;
-        --m3-on-primary-fixed-variant: 114 53 35;
-        --m3-secondary-fixed: 255 219 209;
-        --m3-on-secondary-fixed: 44 21 15;
-        --m3-secondary-fixed-dim: 231 189 178;
-        --m3-on-secondary-fixed-variant: 93 64 55;
-        --m3-tertiary-fixed: 245 225 167;
-        --m3-on-tertiary-fixed: 35 27 0;
-        --m3-tertiary-fixed-dim: 216 197 141;
-        --m3-on-tertiary-fixed-variant: 83 70 25;
-        --m3-surface-dim: 26 17 15;
-        --m3-surface-bright: 66 55 52;
-        --m3-surface-container-lowest: 20 12 10;
-        --m3-surface-container-low: 35 25 23;
-        --m3-surface-container: 39 29 27;
-        --m3-surface-container-high: 50 40 37;
-        --m3-surface-container-highest: 61 50 47;
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --m3-primary: 255 181 160;
+            --m3-surface-tint: 255 181 160;
+            --m3-on-primary: 86 31 15;
+            --m3-primary-container: 114 53 35;
+            --m3-on-primary-container: 255 219 209;
+            --m3-secondary: 231 189 178;
+            --m3-on-secondary: 68 42 34;
+            --m3-secondary-container: 93 64 55;
+            --m3-on-secondary-container: 255 219 209;
+            --m3-tertiary: 216 197 141;
+            --m3-on-tertiary: 59 47 5;
+            --m3-tertiary-container: 83 70 25;
+            --m3-on-tertiary-container: 245 225 167;
+            --m3-error: 255 180 171;
+            --m3-on-error: 105 0 5;
+            --m3-error-container: 147 0 10;
+            --m3-on-error-container: 255 218 214;
+            --m3-background: 26 17 15;
+            --m3-on-background: 241 223 218;
+            --m3-surface: 26 17 15;
+            --m3-on-surface: 241 223 218;
+            --m3-surface-variant: 83 67 63;
+            --m3-on-surface-variant: 216 194 188;
+            --m3-outline: 160 140 135;
+            --m3-outline-variant: 83 67 63;
+            --m3-shadow: 0 0 0;
+            --m3-scrim: 0 0 0;
+            --m3-inverse-surface: 241 223 218;
+            --m3-inverse-on-surface: 57 46 43;
+            --m3-inverse-primary: 143 76 56;
+            --m3-primary-fixed: 255 219 209;
+            --m3-on-primary-fixed: 58 11 1;
+            --m3-primary-fixed-dim: 255 181 160;
+            --m3-on-primary-fixed-variant: 114 53 35;
+            --m3-secondary-fixed: 255 219 209;
+            --m3-on-secondary-fixed: 44 21 15;
+            --m3-secondary-fixed-dim: 231 189 178;
+            --m3-on-secondary-fixed-variant: 93 64 55;
+            --m3-tertiary-fixed: 245 225 167;
+            --m3-on-tertiary-fixed: 35 27 0;
+            --m3-tertiary-fixed-dim: 216 197 141;
+            --m3-on-tertiary-fixed-variant: 83 70 25;
+            --m3-surface-dim: 26 17 15;
+            --m3-surface-bright: 66 55 52;
+            --m3-surface-container-lowest: 20 12 10;
+            --m3-surface-container-low: 35 25 23;
+            --m3-surface-container: 39 29 27;
+            --m3-surface-container-high: 50 40 37;
+            --m3-surface-container-highest: 61 50 47;
+        }
     }
 
     /* Light Green */
-    /*:root {*/
-    /*    --m3-primary: 76 102 43;*/
-    /*    --m3-surface-tint: 76 102 43;*/
-    /*    --m3-on-primary: 255 255 255;*/
-    /*    --m3-primary-container: 205 237 163;*/
-    /*    --m3-on-primary-container: 16 32 0;*/
-    /*    --m3-secondary: 88 98 73;*/
-    /*    --m3-on-secondary: 255 255 255;*/
-    /*    --m3-secondary-container: 220 231 200;*/
-    /*    --m3-on-secondary-container: 21 30 11;*/
-    /*    --m3-tertiary: 56 102 99;*/
-    /*    --m3-on-tertiary: 255 255 255;*/
-    /*    --m3-tertiary-container: 188 236 231;*/
-    /*    --m3-on-tertiary-container: 0 32 30;*/
-    /*    --m3-error: 186 26 26;*/
-    /*    --m3-on-error: 255 255 255;*/
-    /*    --m3-error-container: 255 218 214;*/
-    /*    --m3-on-error-container: 65 0 2;*/
-    /*    --m3-background: 249 250 239;*/
-    /*    --m3-on-background: 26 28 22;*/
-    /*    --m3-surface: 249 250 239;*/
-    /*    --m3-on-surface: 26 28 22;*/
-    /*    --m3-surface-variant: 225 228 213;*/
-    /*    --m3-on-surface-variant: 68 72 61;*/
-    /*    --m3-outline: 117 121 108;*/
-    /*    --m3-outline-variant: 197 200 186;*/
-    /*    --m3-shadow: 0 0 0;*/
-    /*    --m3-scrim: 0 0 0;*/
-    /*    --m3-inverse-surface: 47 49 42;*/
-    /*    --m3-inverse-on-surface: 241 242 230;*/
-    /*    --m3-inverse-primary: 177 209 138;*/
-    /*    --m3-primary-fixed: 205 237 163;*/
-    /*    --m3-on-primary-fixed: 16 32 0;*/
-    /*    --m3-primary-fixed-dim: 177 209 138;*/
-    /*    --m3-on-primary-fixed-variant: 53 78 22;*/
-    /*    --m3-secondary-fixed: 220 231 200;*/
-    /*    --m3-on-secondary-fixed: 21 30 11;*/
-    /*    --m3-secondary-fixed-dim: 191 203 173;*/
-    /*    --m3-on-secondary-fixed-variant: 64 74 51;*/
-    /*    --m3-tertiary-fixed: 188 236 231;*/
-    /*    --m3-on-tertiary-fixed: 0 32 30;*/
-    /*    --m3-tertiary-fixed-dim: 160 208 203;*/
-    /*    --m3-on-tertiary-fixed-variant: 31 78 75;*/
-    /*    --m3-surface-dim: 218 219 208;*/
-    /*    --m3-surface-bright: 249 250 239;*/
-    /*    --m3-surface-container-lowest: 255 255 255;*/
-    /*    --m3-surface-container-low: 243 244 233;*/
-    /*    --m3-surface-container: 238 239 227;*/
-    /*    --m3-surface-container-high: 232 233 222;*/
-    /*    --m3-surface-container-highest: 226 227 216;*/
-    /*}*/
+    @media (prefers-color-scheme: light) {
+        :root {
+            --m3-primary: 76 102 43;
+            --m3-surface-tint: 76 102 43;
+            --m3-on-primary: 255 255 255;
+            --m3-primary-container: 205 237 163;
+            --m3-on-primary-container: 16 32 0;
+            --m3-secondary: 88 98 73;
+            --m3-on-secondary: 255 255 255;
+            --m3-secondary-container: 220 231 200;
+            --m3-on-secondary-container: 21 30 11;
+            --m3-tertiary: 56 102 99;
+            --m3-on-tertiary: 255 255 255;
+            --m3-tertiary-container: 188 236 231;
+            --m3-on-tertiary-container: 0 32 30;
+            --m3-error: 186 26 26;
+            --m3-on-error: 255 255 255;
+            --m3-error-container: 255 218 214;
+            --m3-on-error-container: 65 0 2;
+            --m3-background: 249 250 239;
+            --m3-on-background: 26 28 22;
+            --m3-surface: 249 250 239;
+            --m3-on-surface: 26 28 22;
+            --m3-surface-variant: 225 228 213;
+            --m3-on-surface-variant: 68 72 61;
+            --m3-outline: 117 121 108;
+            --m3-outline-variant: 197 200 186;
+            --m3-shadow: 0 0 0;
+            --m3-scrim: 0 0 0;
+            --m3-inverse-surface: 47 49 42;
+            --m3-inverse-on-surface: 241 242 230;
+            --m3-inverse-primary: 177 209 138;
+            --m3-primary-fixed: 205 237 163;
+            --m3-on-primary-fixed: 16 32 0;
+            --m3-primary-fixed-dim: 177 209 138;
+            --m3-on-primary-fixed-variant: 53 78 22;
+            --m3-secondary-fixed: 220 231 200;
+            --m3-on-secondary-fixed: 21 30 11;
+            --m3-secondary-fixed-dim: 191 203 173;
+            --m3-on-secondary-fixed-variant: 64 74 51;
+            --m3-tertiary-fixed: 188 236 231;
+            --m3-on-tertiary-fixed: 0 32 30;
+            --m3-tertiary-fixed-dim: 160 208 203;
+            --m3-on-tertiary-fixed-variant: 31 78 75;
+            --m3-surface-dim: 218 219 208;
+            --m3-surface-bright: 249 250 239;
+            --m3-surface-container-lowest: 255 255 255;
+            --m3-surface-container-low: 243 244 233;
+            --m3-surface-container: 238 239 227;
+            --m3-surface-container-high: 232 233 222;
+            --m3-surface-container-highest: 226 227 216;
+        }
+    }
 
     html {
         font-family: "Roboto Flex Variable", sans-serif;
+        @apply bg-m3-surface;
     }
 }
 

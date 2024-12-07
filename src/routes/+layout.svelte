@@ -16,6 +16,7 @@
 
     import NavigationRail from "$lib/components/navigation/NavigationRail.svelte";
     import NavigationButton from "$lib/components/navigation/NavigationButton.svelte";
+    import Divider from "$lib/components/dividers/Divider.svelte";
 
 	let { children } = $props();
 
@@ -72,20 +73,20 @@
     ]);
 </script>
 
-<div class="fixed top-0 left-0 bottom-0 z-10 bg-m3-surface-container-high">
-    <NavigationRail>
-        {#each nav_buttons as { icon, label, link, selected }}
-            <NavigationButton
-                icon={icon}
-                label={label}
-                link={link}
-                selected={selected()}
-            />
-        {/each}
-    </NavigationRail>
-</div>
+<NavigationRail class="fixed top-0 left-0 bottom-0 z-10 bg-transparent" menu_callback={() => {}}>
+    {#each nav_buttons as { icon, label, link, selected }}
+        <NavigationButton
+            icon={icon}
+            label={label}
+            link={link}
+            selected={selected()}
+        />
+    {/each}
+</NavigationRail>
 
-<main class="bg-m3-surface text-m3-on-surface min-h-screen relative ml-[80px]">
+<Divider orientation="vertical" class="fixed top-0 left-[80px] bottom-0 z-10" />
+
+<main class="text-m3-on-surface min-h-screen relative ml-[81px]">
     <div class="p-[1px] max-w-[600px] mx-auto">
         {#key $navigating}
             <div class="m-4" out:fly={{ y: 5, duration: 150 }} in:fly={{ y: -5, duration: 150, delay: 150 }}>

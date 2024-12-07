@@ -6,7 +6,7 @@
     import { createDialog } from "@melt-ui/svelte";
     import SvgIcon from "@jamescoyle/svelte-icon";
 
-    import Button from "$lib/components/buttons/Button.svelte";
+    import Button from "$lib/components/buttons/CommonButton.svelte";
 
     interface Props {
         icon?: string;
