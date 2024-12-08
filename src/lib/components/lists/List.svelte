@@ -4,11 +4,11 @@
     interface Props {
         link?: string;
         leading?: Snippet,
-        body: Snippet,
+        children: Snippet,
         trailing?: Snippet,
     }
 
-    let { link, leading, body, trailing }: Props = $props();
+    let { link, leading, children, trailing }: Props = $props();
 </script>
 
 {#snippet list()}
@@ -18,7 +18,7 @@
         </div>
     {/if}
     <div class="px-4 py-[12px] flex flex-col w-full justify-center items-start">
-        {@render body()}
+        {@render children()}
     </div>
     {#if trailing}
         <div class="pr-4 flex justify-center items-center text-m3-on-surface-variant">

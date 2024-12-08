@@ -19,43 +19,43 @@
         {
             icon: mdiMenuDown,
             label: "Accordions",
-            support: "These dont make sound",
+            support: "Not an official component!",
             link: "/components/accordions",
         },
         {
             icon: mdiToggleSwitchOutline,
             label: "Switch",
-            support: "Also know as a Toggle",
+            support: "",
             link: "/components/switch",
         },
         {
             icon: mdiCookieOutline,
             label: "Dialogs",
-            support: "Cookie popups everywhere!",
+            support: "",
             link: "/components/dialogs",
         },
         {
             icon: mdiButtonPointer,
             label: "Buttons",
-            support: "Click everything",
+            support: "",
             link: "/components/buttons",
         },
         {
             icon: mdiFormatListBulletedType,
             label: "Lists",
-            support: "Show a lot of information in a pretty way",
+            support: "Janky",
             link: "/components/lists",
         },
         {
             icon: mdiNavigationVariantOutline,
             label: "Navigation",
-            support: "Dont get lost!",
+            support: "",
             link: "/components/navigation",
         },
         {
             icon: mdiCardOutline,
             label: "Chips",
-            support: "Not edible",
+            support: "",
             link: "/components/chips",
         },
     ]
@@ -65,16 +65,14 @@
 
 <Card style={"filled"} class="mb-3">
     <ul class="flex flex-col rounded py-2">
-        {#each components as { icon, link, label, support }}
+        {#each components as { icon, link, label, support }, i}
             <li>
                 <List link={link}>
                     {#snippet leading()}
                         <SvgIcon type="mdi" path={icon} size={24} />
                     {/snippet}
-                    {#snippet body()}
-                        <ListLabel type={"headline"} text={label} />
-                        <ListLabel type={"supporting"} text={support} />
-                    {/snippet}
+                    <ListLabel type={"headline"}>{label}</ListLabel>
+                    <ListLabel type={"supporting"}>{support}</ListLabel>
                     {#snippet trailing()}
                         <SvgIcon type="mdi" path={mdiMenuRight} size={24} />
                     {/snippet}

@@ -20,10 +20,12 @@
                 {#snippet leading()}
                     <SvgIcon type="mdi" path={mdiShieldAccountOutline} size={24} />
                 {/snippet}
-                {#snippet body()}
-                    <ListLabel type="headline" text={"Protected posts"} />
-                    <ListLabel type="supporting" text={"This will make your posts only viewable by people that follow you"} />
-                {/snippet}
+                <ListLabel type={"headline"}>
+                    Protected posts
+                </ListLabel>
+                <ListLabel type={"supporting"}>
+                    This will make your posts only viewable by people that follow you
+                </ListLabel>
                 {#snippet trailing()}
                     <Switch label={"Protect posts"} toggled={false} />
                 {/snippet}
@@ -34,10 +36,12 @@
                 {#snippet leading()}
                     <SvgIcon type="mdi" path={mdiMessageBadgeOutline} size={24} />
                 {/snippet}
-                {#snippet body()}
-                    <ListLabel type="headline" text={"Message Request"} />
-                    <ListLabel type="supporting" text={"Allow people who dont follow you to send messages"} />
-                {/snippet}
+                <ListLabel type={"headline"}>
+                    Message Request
+                </ListLabel>
+                <ListLabel type={"supporting"}>
+                    Allow people who dont follow you to send messages
+                </ListLabel>
                 {#snippet trailing()}
                     <Switch label={"Allow message requests"} toggled={true} />
                 {/snippet}

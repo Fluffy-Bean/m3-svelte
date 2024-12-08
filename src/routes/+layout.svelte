@@ -128,11 +128,11 @@
 {/if}
 
 <main
-        class="text-m3-on-surface min-h-screen relative"
-        class:ml-[80px]={windowWidth > 660}
-        class:mb-[80px]={windowWidth <= 660}
+        class="text-m3-on-surface min-h-screen relative p-[0.1px]"
+        class:pl-[80px]={windowWidth > 660}
+        class:pb-[80px]={windowWidth <= 660}
 >
-    <div class="p-[1px] max-w-[600px] mx-auto">
+    <div class="max-w-[600px] mx-auto">
         {#key $navigating}
             <div class="m-4" out:fly={{ y: 5, duration: 150 }} in:fly={{ y: -5, duration: 150, delay: 150 }}>
                 {@render children()}

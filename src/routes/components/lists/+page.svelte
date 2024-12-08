@@ -22,35 +22,23 @@
     <ul class="flex flex-col rounded py-2">
         <li>
             <List>
-                {#snippet leading()}
-                    <SvgIcon type="mdi" path={mdiWifi} size={24} />
-                {/snippet}
-                {#snippet body()}
-                    <ListLabel type={"headline"} text={"Connections"} />
-                    <ListLabel type={"supporting"} text={"Wifi, Bluetooth and Hotspots"} />
-                {/snippet}
+                {#snippet leading()}<SvgIcon type="mdi" path={mdiWifi} size={24} />{/snippet}
+                <ListLabel type={"headline"}>Connections</ListLabel>
+                <ListLabel type={"supporting"}>Wifi, Bluetooth and Hotspots</ListLabel>
             </List>
         </li>
         <li>
             <List>
-                {#snippet leading()}
-                    <SvgIcon type="mdi" path={mdiBrightness6} size={24} />
-                {/snippet}
-                {#snippet body()}
-                    <ListLabel type={"headline"} text={"Display"} />
-                    <ListLabel type={"supporting"} text={"Brightness, Themes"} />
-                {/snippet}
+                {#snippet leading()}<SvgIcon type="mdi" path={mdiBrightness6} size={24} />{/snippet}
+                <ListLabel type={"headline"}>Display</ListLabel>
+                <ListLabel type={"supporting"}>Brightness, Themes</ListLabel>
             </List>
         </li>
         <li>
             <List>
-                {#snippet leading()}
-                    <SvgIcon type="mdi" path={mdiSd} size={24} />
-                {/snippet}
-                {#snippet body()}
-                    <ListLabel type={"headline"} text={"Storage"} />
-                    <ListLabel type={"supporting"} text={"58% used - 53.81 GB free"} />
-                {/snippet}
+                {#snippet leading()}<SvgIcon type="mdi" path={mdiSd} size={24} />{/snippet}
+                <ListLabel type={"headline"}>Storage</ListLabel>
+                <ListLabel type={"supporting"}>58% used - 53.81 GB free</ListLabel>
             </List>
         </li>
     </ul>
@@ -64,13 +52,9 @@
         <li>
             <List>
                 {#snippet leading()}
-                    <div class="bg-m3-tertiary text-m3-on-tertiary w-[40px] h-[40px] flex justify-center items-center rounded-full text-m3-size-body-large">
-                        B
-                    </div>
+                    <div class="bg-m3-tertiary text-m3-on-tertiary w-[40px] h-[40px] flex justify-center items-center rounded-full text-m3-size-body-large">B</div>
                 {/snippet}
-                {#snippet body()}
-                    <ListLabel type={"headline"} text={"Becca"} />
-                {/snippet}
+                <ListLabel type={"headline"}>Becca</ListLabel>
                 {#snippet trailing()}
                     <SvgIcon type="mdi" path={mdiPhoneOutline} size={24} />
                 {/snippet}
@@ -79,13 +63,9 @@
         <li>
             <List>
                 {#snippet leading()}
-                    <div class="bg-m3-tertiary text-m3-on-tertiary w-[40px] h-[40px] flex justify-center items-center rounded-full text-m3-size-body-large">
-                        M
-                    </div>
-                    {/snippet}
-                {#snippet body()}
-                    <ListLabel type={"headline"} text={"Michael"} />
+                    <div class="bg-m3-tertiary text-m3-on-tertiary w-[40px] h-[40px] flex justify-center items-center rounded-full text-m3-size-body-large">M</div>
                 {/snippet}
+                <ListLabel type={"headline"}>Michael</ListLabel>
                 {#snippet trailing()}
                     <SvgIcon type="mdi" path={mdiPhoneOutline} size={24} />
                 {/snippet}
@@ -94,13 +74,9 @@
         <li>
             <List>
                 {#snippet leading()}
-                    <div class="bg-m3-tertiary text-m3-on-tertiary w-[40px] h-[40px] flex justify-center items-center rounded-full text-m3-size-body-large">
-                        K
-                    </div>
+                    <div class="bg-m3-tertiary text-m3-on-tertiary w-[40px] h-[40px] flex justify-center items-center rounded-full text-m3-size-body-large">K</div>
                 {/snippet}
-                {#snippet body()}
-                    <ListLabel type={"headline"} text={"Kris"} />
-                {/snippet}
+                <ListLabel type={"headline"}>Kris</ListLabel>
                 {#snippet trailing()}
                     <SvgIcon type="mdi" path={mdiPhoneOutline} size={24} />
                 {/snippet}
