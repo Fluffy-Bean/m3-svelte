@@ -34,10 +34,10 @@
 
 <h1 class="text-m3-size-headline-large mb-3">Navigation</h1>
 
-<Card style={"filled"} class="mb-3 p-5">
+<Card type={"filled"} class="mb-3 p-5">
     <h1 class="text-m3-size-headline-small mb-2">Navigation Rail</h1>
     <div class="h-[700px] bg-m3-surface-container-high w-fit">
-        <NavigationRail menu_callback={navigation_buttons.menu_callback}>
+        <NavigationRail callback={navigation_buttons.menu_callback}>
             {#each navigation_buttons.options as { icon, label, link, selected }}
                 <NavigationRailButton icon={icon} label={label} link={link} selected={selected} />
             {/each}
@@ -45,7 +45,7 @@
     </div>
 </Card>
 
-<Card style={"filled"} class="mb-3 p-5">
+<Card type={"filled"} class="mb-3 p-5">
     <h1 class="text-m3-size-headline-small mb-2">Navigation Bar</h1>
     <NavigationBar>
         {#each navigation_buttons.options as { icon, label, link, selected }}

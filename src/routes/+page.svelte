@@ -10,7 +10,7 @@
 <h1 class="text-m3-size-headline-large">M3 Svelte Components</h1>
 <p class="text-m3-size-body-large mb-3">By Michał</p>
 
-<Card style={"filled"} class="mb-3 bg-m3-error-container">
+<Card type={"filled"} class="mb-3 bg-m3-error-container">
     <List>
         {#snippet leading()}
             <span class="text-m3-on-error-container"><SvgIcon type="mdi" path={mdiAlertOutline} size={24} /></span>

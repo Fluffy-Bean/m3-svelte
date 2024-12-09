@@ -6,7 +6,10 @@
         class?: string;
     }
 
-    let { orientation, class: c = "" }: Props = $props();
+    let {
+        orientation,
+        class: c,
+    }: Props = $props();
 </script>
 
 {#if orientation === "horizontal"}

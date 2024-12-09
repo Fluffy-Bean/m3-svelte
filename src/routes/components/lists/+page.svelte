@@ -10,11 +10,12 @@
     import Card from "$lib/components/cards/Card.svelte";
     import List from "$lib/components/lists/List.svelte";
     import ListLabel from "$lib/components/lists/ListLabel.svelte";
+    import Avatar from "$lib/components/avatar/Avatar.svelte";
 </script>
 
 <h1 class="text-m3-size-headline-large mb-3">Lists</h1>
 
-<Card style={"filled"} class="mb-3">
+<Card type={"filled"} class="mb-3">
     <div class="p-5 pb-1">
         <h2 class="text-m3-size-headline-small">Settings</h2>
         <p class="text-m3-size-body-medium">Example settings list</p>
@@ -44,7 +45,7 @@
     </ul>
 </Card>
 
-<Card style={"filled"} class="mb-3">
+<Card type={"filled"} class="mb-3">
     <div class="p-5 pb-1">
         <h2 class="text-m3-size-headline-small">Contacts</h2>
     </div>
@@ -52,9 +53,9 @@
         <li>
             <List>
                 {#snippet leading()}
-                    <div class="bg-m3-tertiary text-m3-on-tertiary w-[40px] h-[40px] flex justify-center items-center rounded-full text-m3-size-body-large">B</div>
+                    <Avatar img={""} fallback={"BS"} />
                 {/snippet}
-                <ListLabel type={"headline"}>Becca</ListLabel>
+                <ListLabel type={"headline"}>Becca Shmalov</ListLabel>
                 {#snippet trailing()}
                     <SvgIcon type="mdi" path={mdiPhoneOutline} size={24} />
                 {/snippet}
@@ -63,7 +64,7 @@
         <li>
             <List>
                 {#snippet leading()}
-                    <div class="bg-m3-tertiary text-m3-on-tertiary w-[40px] h-[40px] flex justify-center items-center rounded-full text-m3-size-body-large">M</div>
+                    <Avatar img={"/goob.png"} fallback={"M"} />
                 {/snippet}
                 <ListLabel type={"headline"}>Michael</ListLabel>
                 {#snippet trailing()}
@@ -74,7 +75,7 @@
         <li>
             <List>
                 {#snippet leading()}
-                    <div class="bg-m3-tertiary text-m3-on-tertiary w-[40px] h-[40px] flex justify-center items-center rounded-full text-m3-size-body-large">K</div>
+                    <Avatar img={"/leg.jpg"} fallback={"K"} />
                 {/snippet}
                 <ListLabel type={"headline"}>Kris</ListLabel>
                 {#snippet trailing()}

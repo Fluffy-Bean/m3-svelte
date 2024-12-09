@@ -3,15 +3,22 @@
     import { twMerge as tw } from "tailwind-merge";
 
     interface Props {
-        style: "filled" | "tonal" | "outlined" | "text";
-        icon_orientation?: "left" | "right";
-        text?: string;
+        type: "filled" | "tonal" | "outlined" | "text";
+        orientation?: "left" | "right";
+        label: string;
         icon?: string;
-        onclick?: () => void;
+        onclick: () => void;
         class?: string;
     }
 
-    let { style, icon_orientation, text, icon, onclick = () => {}, class: c = "" }: Props = $props();
+    let {
+        type,
+        orientation,
+        label,
+        icon,
+        class: c,
+        onclick,
+    }: Props = $props();
 
     let styles = {
         filled: "bg-m3-primary text-m3-on-primary hover:bg-m3-primary focus:bg-m3-primary active:bg-m3-primary hover:shadow focus:shadow-none active:shadow-none",
@@ -22,11 +29,11 @@
 </script>
 
 <button
-    class={tw("flex justify-center items-center gap-4 h-10 px-6 rounded-full shadow-m3-shadow focus:outline-none", styles[style], c)}
-    class:flex-row={icon_orientation === "left"}
-    class:flex-row-reverse={icon_orientation === "right"}
+    class={tw("flex justify-center items-center gap-4 h-10 px-6 rounded-full shadow-m3-shadow focus:outline-none", styles[type], c)}
+    class:flex-row={orientation === "left"}
+    class:flex-row-reverse={orientation === "right"}
     onclick={onclick}
 >
     {#if icon}<div class="-mx-2"><SvgIcon type="mdi" path={icon} size={18} /></div>{/if}
-    {#if text}<span class="text-center text-m3-size-label-large">{text}</span>{/if}
+    <span class="text-center text-m3-size-label-large">{label}</span>
 </button>

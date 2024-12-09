@@ -103,13 +103,13 @@
 <svelte:window bind:innerWidth={windowWidth} />
 
 {#if windowWidth > 660}
-    <NavigationRail class="fixed top-0 left-0 bottom-0 z-10 bg-transparent" menu_callback={() => {}}>
+    <NavigationRail class="fixed top-0 left-0 bottom-0 z-10 bg-transparent" callback={() => { alert(":3") }}>
         {#each desktop_nav as { icon, label, link, selected }}
             <NavigationRailButton
-                    icon={icon}
-                    label={label}
-                    link={link}
-                    selected={selected()}
+                icon={icon}
+                label={label}
+                link={link}
+                selected={selected()}
             />
         {/each}
     </NavigationRail>
@@ -118,19 +118,19 @@
     <NavigationBar class="fixed bottom-0 left-0 right-0 z-10">
         {#each mobile_nav as { icon, label, link, selected }}
             <NavigationBarButton
-                    icon={icon}
-                    label={label}
-                    link={link}
-                    selected={selected()}
+                icon={icon}
+                label={label}
+                link={link}
+                selected={selected()}
             />
         {/each}
     </NavigationBar>
 {/if}
 
 <main
-        class="text-m3-on-surface min-h-screen relative p-[0.1px]"
-        class:pl-[80px]={windowWidth > 660}
-        class:pb-[80px]={windowWidth <= 660}
+    class="text-m3-on-surface min-h-screen relative p-[0.1px]"
+    class:pl-[80px]={windowWidth > 660}
+    class:pb-[80px]={windowWidth <= 660}
 >
     <div class="max-w-[600px] mx-auto">
         {#key $navigating}

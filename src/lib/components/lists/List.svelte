@@ -2,13 +2,20 @@
     import type { Snippet } from "svelte";
 
     interface Props {
-        link?: string;
         leading?: Snippet,
         children: Snippet,
         trailing?: Snippet,
+        link?: string;
+        onclick?: () => void;
     }
 
-    let { link, leading, children, trailing }: Props = $props();
+    let {
+        link,
+        onclick,
+        leading,
+        children,
+        trailing,
+    }: Props = $props();
 </script>
 
 {#snippet list()}
@@ -17,7 +24,7 @@
             {@render leading()}
         </div>
     {/if}
-    <div class="px-4 py-[12px] flex flex-col w-full justify-center items-start">
+    <div class="px-4 py-[12px] flex flex-col w-full justify-center items-start text-left">
         {@render children()}
     </div>
     {#if trailing}
@@ -28,11 +35,15 @@
 {/snippet}
 
 {#if link}
-    <a href={link} class="flex flex-row min-h-[72px]">
+    <a href={link} class="flex flex-row min-h-[72px] w-full">
         {@render list()}
     </a>
+{:else if onclick}
+    <button class="flex flex-row min-h-[72px] w-full" onclick={onclick}>
+        {@render list()}
+    </button>
 {:else}
-    <div class="flex flex-row min-h-[72px]">
+    <div class="flex flex-row min-h-[72px] w-full">
         {@render list()}
     </div>
 {/if}

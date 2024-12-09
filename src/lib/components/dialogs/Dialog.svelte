@@ -1,12 +1,11 @@
 <script lang="ts">
     import type { Snippet } from 'svelte';
-
     import { fade, scale } from "svelte/transition";
     import { quintOut } from "svelte/easing";
     import { createDialog } from "@melt-ui/svelte";
     import SvgIcon from "@jamescoyle/svelte-icon";
 
-    import Button from "$lib/components/buttons/CommonButton.svelte";
+    import Button from "$lib/components/buttons/Button.svelte";
 
     interface Props {
         icon?: string;
@@ -21,7 +20,14 @@
         open: boolean;
     }
 
-    let { open, icon, heading, supporting, actions, children }: Props = $props();
+    let {
+        open,
+        icon,
+        heading,
+        supporting,
+        actions,
+        children,
+    }: Props = $props();
 
     const {
         elements: { overlay, content, description, portalled },
@@ -49,19 +55,25 @@
                 <p class="text-m3-size-body-medium text-m3-on-surface-variant text-left mr-auto">{ supporting }</p>
             </div>
             {#if children}
-                <div class="px-6">
-                    <div class="overflow-y-auto max-h-96 text-stone-800" {...$description} use:description>
-                        {@render children?.()}
-                    </div>
+                <div class="px-6 overflow-y-auto overflow-x-hidden max-h-96 text-m3-on-surface" {...$description} use:description>
+                    {@render children?.()}
                 </div>
             {/if}
             <div class="py-4 px-6 flex justify-end items-center gap-1" class:pt-0={!children}>
                 {#if actions && actions.length > 0}
                     {#each actions as { text, onclick, style }}
-                        <Button style={style ?? "text"} text={text} onclick={onclick} />
+                        <Button
+                            type={style ?? "text"}
+                            label={text}
+                            onclick={onclick}
+                        />
                     {/each}
                 {:else}
-                    <Button style={"text"} text="Close" onclick={() => open = false} />
+                    <Button
+                        type={"text"}
+                        label="Close"
+                        onclick={() => { open = false }}
+                    />
                 {/if}
             </div>
         </div>

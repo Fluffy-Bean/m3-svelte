@@ -3,12 +3,16 @@
     import { twMerge as tw } from "tailwind-merge";
 
     interface Props {
-        style: "elevated" | "filled" | "outlined";
+        type: "elevated" | "filled" | "outlined";
         children: Snippet;
         class?: string;
     }
 
-    let { style, children, class: c = "" }: Props = $props();
+    let {
+        type,
+        children,
+        class: c,
+    }: Props = $props();
 
     let styles = {
         elevated: "bg-m3-surface-container-low text-m3-on-surface-container-low shadow-sm shadow-m3-shadow",
@@ -17,6 +21,4 @@
     };
 </script>
 
-<div class={tw("rounded-2xl", styles[style], c)}>
-    {@render children()}
-</div>
+<div class={tw("rounded-2xl", styles[type], c)}>{@render children()}</div>

@@ -8,14 +8,21 @@
         selected: boolean;
     }
 
-    let { icon, label, link, selected }: Props = $props();
+    let {
+        icon,
+        label,
+        link,
+        selected,
+    }: Props = $props();
 </script>
 
-<a class="h-[56px] flex flex-col justify-center items-center gap-[4px]" href={link}>
+<a class="h-[56px] w-[56px] flex flex-col justify-center items-center gap-[4px]" href={link}>
     <span
-        class="h-[32px] w-[56px] rounded-full flex items-center justify-center"
+        class="h-[32px] w-[32px] rounded-full flex items-center justify-center"
         class:bg-m3-secondary-container={selected}
         class:text-m3-on-secondary-container={selected}
+        class:!w-[56px]={selected}
+        class:transition-all={selected}
         class:bg-m3-transparent={!selected}
         class:text-m3-on-surface-variant={!selected}
     >

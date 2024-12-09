@@ -8,7 +8,11 @@
         class?: string,
     }
 
-    let { children, type, class: c = "" }: Props = $props();
+    let {
+        children,
+        type,
+        class: c,
+    }: Props = $props();
 </script>
 
 {#if type === "headline"}

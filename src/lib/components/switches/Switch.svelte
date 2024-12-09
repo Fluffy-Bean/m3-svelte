@@ -6,7 +6,10 @@
         toggled: boolean;
     }
 
-    let { label, toggled }: Props = $props();
+    let {
+        label,
+        toggled,
+    }: Props = $props();
 
     const {
         elements: { root, input },

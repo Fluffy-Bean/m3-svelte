@@ -63,7 +63,7 @@
 
 <h1 class="text-m3-size-headline-large mb-3">Components</h1>
 
-<Card style={"filled"} class="mb-3">
+<Card type={"filled"} class="mb-3">
     <ul class="flex flex-col rounded py-2">
         {#each components as { icon, link, label, support }, i}
             <li>

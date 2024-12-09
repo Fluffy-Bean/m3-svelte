@@ -23,10 +23,6 @@
 
 <h1 class="text-m3-size-headline-large mb-3">Accordions</h1>
 
-<div class="mb-3">
-    <Card style={"filled"}>
-        <div class="p-5">
-            <Dropdown entries={accordions} />
-        </div>
-    </Card>
-</div>
+<Card type={"filled"} class="mb-3 p-5">
+    <Dropdown entries={accordions} />
+</Card>
